@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sport247 - Trang Chủ Thể Thao</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    
+    <!-- File CSS tùy chỉnh -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- 1. Thanh điều hướng (Navbar) -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-success" href="index.html"><i class="bi bi-trophy-fill me-1"></i> SPORT247</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- Đã sửa tin-tuc.html thành tintuc.html -->
+                        <a class="nav-link" href="tintuc.html">Tin tức chi tiết</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Bóng đá</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Bóng rổ</a>
+                    </li>
+                </ul>
+
+                <!-- Khu vực hiển thị tài khoản động -->
+                <div class="d-flex align-items-center" id="auth-section">
+                    <a href="sign-in.html" class="btn btn-outline-light btn-sm me-2" id="btn-login">Đăng nhập</a>
+                    <a href="sign-up.html" class="btn btn-success btn-sm" id="btn-register">Đăng ký</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Hero Banner -->
+    <div class="hero-banner text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-7 text-start">
+                    <span class="badge bg-warning text-dark mb-2">TÂM ĐIỂM TUẦN NÀY</span>
+                    <h1 class="display-5 fw-bold">Cuộc đua vô địch Ngoại hạng Anh bước vào giai đoạn khốc liệt</h1>
+                    <p class="fs-5">Cập nhật lịch thi đấu, nhận định chuyên sâu và những diễn biến mới nhất từ các CLB hàng đầu châu Âu.</p>
+                    <div class="mt-3">
+                        <a href="tintuc.html" class="btn btn-light btn-lg me-2 text-success fw-bold">Xem chi tiết</a>
+                    </div>
+                </div>
+                <div class="col-md-5 text-center mt-4 mt-md-0">
+                    <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=500&q=80" 
+                         class="img-fluid rounded shadow hero-img" alt="Thể thao nổi bật" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Lưới bài viết mới nhất -->
+    <div class="container my-5">
+        <h3 class="text-center mb-4 border-bottom pb-2">Tin Tức Thể Thao Mới Nhất</h3>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100 shadow-sm news-card">
+                    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=400&q=80" class="card-img-top news-card-img" alt="Bóng đá">
+                    <div class="card-body">
+                        <span class="badge bg-danger mb-2">Bóng đá</span>
+                        <h5 class="card-title">Siêu sao tỏa sáng giúp đội nhà giành chiến thắng nghẹt thở</h5>
+                        <p class="card-text">Pha lập công ở phút bù giờ đã ấn định tỷ số chung cuộc trong trận cầu 5 bàn thắng.</p>
+                    </div>
+                    <div class="card-footer bg-white border-top-0">
+                        <a href="tintuc.html" class="btn btn-outline-success w-100">Đọc bài viết</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm news-card">
+                    <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=400&q=80" class="card-img-top news-card-img" alt="Bóng rổ">
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark mb-2">Bóng rổ</span>
+                        <h5 class="card-title">Kỷ lục ghi điểm mới được thiết lập tại giải nhà nghề</h5>
+                        <p class="card-text">Màn trình diễn đỉnh cao của tay ném chủ lực khiến khán giả mãn nhãn.</p>
+                    </div>
+                    <div class="card-footer bg-white border-top-0">
+                        <a href="tintuc.html" class="btn btn-outline-success w-100">Đọc bài viết</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm news-card">
+                    <img src="https://images.unsplash.com/photo-1519766304817-4f37bda74a29?auto=format&fit=crop&w=400&q=80" class="card-img-top news-card-img" alt="Tennis">
+                    <div class="card-body">
+                        <span class="badge bg-primary mb-2">Quần vợt</span>
+                        <h5 class="card-title">Hạt giống số một tiến vào tứ kết sau trận đấu căng thẳng</h5>
+                        <p class="card-text">Vượt qua thử thách khó khăn, ứng cử viên vô địch tiếp tục khẳng định phong độ.</p>
+                    </div>
+                    <div class="card-footer bg-white border-top-0">
+                        <a href="tintuc.html" class="btn btn-outline-success w-100">Đọc bài viết</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0 text-secondary">&copy; 2026 Sport247. Trang tin tức thể thao hàng đầu.</p>
+        </div>
+    </footer>
+
+    <!-- Kiểm tra trạng thái đăng nhập qua localStorage -->
+    <script>
+        window.addEventListener("DOMContentLoaded", function() {
+            let currentUser = JSON.parse(localStorage.getItem("current_user"));
+            let authSection = document.getElementById("auth-section");
+
+            if (currentUser) {
+                authSection.innerHTML = `
+                    <span class="text-white me-3">Xin chào, <b>${currentUser.name}</b></span>
+                    <button class="btn btn-outline-danger btn-sm" id="btn-logout">Đăng xuất</button>
+                `;
+
+                document.getElementById("btn-logout").addEventListener("click", function() {
+                    localStorage.removeItem("current_user");
+                    location.reload();
+                });
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
