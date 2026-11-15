@@ -1,35 +1,26 @@
-/* ==========================================
-   CUSTOM STYLESHEET CHO SPORT247
-   ========================================== */
-
-/* 1. Hero Banner */
+/* Giao diện Hero Banner */
 .hero-banner {
-    background-color: #198754; /* Màu chủ đạo xanh thể thao */
+    background: linear-gradient(135deg, #198754 0%, #0f5132 100%);
 }
 
-.hero-img {
-    max-height: 300px;
-    object-fit: cover;
-    width: 100%;
+.hero-banner img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* 2. Hiệu ứng cho Thẻ bài viết (Cards) */
+/* Giao diện Card bài viết */
 .news-card {
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .news-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
 }
 
-.news-card-img {
-    height: 180px;
+.news-card img {
+    height: 200px;
     object-fit: cover;
-}
-
-/* 3. Tùy chỉnh chi tiết bài viết */
-.content-body p {
-    line-height: 1.8;
-    color: #444;
 }

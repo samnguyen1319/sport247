@@ -5,28 +5,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chi Tiết Tin Tức - Sport247</title>
-    
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    
-    <!-- File CSS tùy chỉnh -->
-    <link rel="stylesheet" href="style.css" />
+
+    <!-- File CSS tùy chỉnh (lùi 1 cấp thư mục) -->
+    <link rel="stylesheet" href="../css/style.css" />
 </head>
 
-<body>
+<body class="bg-light">
 
-    <!-- Thanh điều hướng đã được đồng bộ chuẩn với index.html -->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <!-- 1. Thanh điều hướng (Navbar) -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold text-success" href="index.html"><i class="bi bi-trophy-fill me-1"></i> SPORT247</a>
+            <a class="navbar-brand fw-bold text-success" href="../index.html"><i class="bi bi-trophy-fill me-1"></i> SPORT247</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Trang chủ</a>
+                        <a class="nav-link" href="../index.html">Trang chủ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="tintuc.html">Tin tức chi tiết</a>
@@ -48,53 +48,117 @@
         </div>
     </nav>
 
-    <!-- Nội dung bài viết chi tiết -->
-    <div class="container my-5" style="max-width: 800px;">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Chi tiết bài viết</li>
-            </ol>
-        </nav>
+    <!-- 2. Nội dung chính bài viết -->
+    <div class="container my-5">
+        <div class="row g-4">
+            <!-- Cột nội dung bài báo -->
+            <div class="col-lg-8">
+                <article class="bg-white p-4 p-md-5 rounded shadow-sm">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="../index.html" class="text-success text-decoration-none">Trang chủ</a></li>
+                            <li class="breadcrumb-item"><a href="#" class="text-success text-decoration-none">Bóng đá</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Ngoại hạng Anh</li>
+                        </ol>
+                    </nav>
 
-        <span class="badge bg-danger mb-2">Bóng đá</span>
-        <h1 class="fw-bold mb-3">Siêu sao tỏa sáng giúp đội nhà giành chiến thắng nghẹt thở</h1>
-        <p class="text-muted">Đăng bởi: Ban biên tập Sport247 | Ngày cập nhật: Tháng 11, 2026</p>
-        
-        <hr>
+                    <span class="badge bg-danger mb-2">Bóng đá</span>
+                    <h1 class="fw-bold mb-3">Cuộc đua vô địch Ngoại hạng Anh bước vào giai đoạn khốc liệt nhất mùa giải</h1>
+                    
+                    <div class="d-flex align-items-center text-muted small mb-4 pb-3 border-bottom">
+                        <span class="me-3"><i class="bi bi-person-circle me-1"></i> Ban Biên Tập Sport247</span>
+                        <span class="me-3"><i class="bi bi-calendar3 me-1"></i> 15/11/2026</span>
+                        <span><i class="bi bi-eye me-1"></i> 12.450 lượt xem</span>
+                    </div>
 
-        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80" 
-             class="img-fluid rounded my-3 w-100" alt="Ảnh chi tiết bài viết" style="max-height: 400px; object-fit: cover;">
+                    <p class="lead fw-semibold text-secondary">
+                        Khoảng cách điểm số mong manh giữa nhóm dẫn đầu khiến mỗi vòng đấu tại giải Ngoại hạng Anh lúc này đều mang tính chất như một trận chung kết thực thụ.
+                    </p>
 
-        <div class="content-body mt-4">
-            <p class="fs-5">Trận đấu tâm điểm vòng đấu vừa qua đã diễn ra vô cùng kịch tính với rượt đuổi tỷ số ngoạn mục giữa hai câu lạc bộ lớn. Sự tỏa sáng đúng lúc của các ngôi sao trên hàng công đã mang lại kết quả trọn vẹn cho người hâm mộ.</p>
-            
-            <h4 class="mt-4">Diễn biến chính trên sân</h4>
-            <p>Ngay từ những phút đầu tiên của hiệp đấu thứ nhất, nhịp độ trận đấu đã được đẩy lên rất cao. Cả hai đội liên tục tạo ra các cơ hội nguy hiểm về phía khung thành của nhau. Bàn thắng mở tỷ số đến như một hệ quả tất yếu từ pha phối hợp đẹp mắt ở phút thứ 25.</p>
-            
-            <h4 class="mt-4">Khoảnh khắc quyết định</h4>
-            <p>Bước sang hiệp thi đấu thứ hai, thế trận càng trở nên căng thẳng hơn khi đội khách có bàn thắng gỡ hòa. Tuy nhiên, bản lĩnh của ứng cử viên vô địch đã được thể hiện đúng lúc ở những phút bù giờ cuối cùng.</p>
-        </div>
+                    <figure class="figure my-4 w-100 text-center">
+                        <img src="../img/img4.jfif" class="figure-img img-fluid rounded shadow-sm w-100" alt="Ngoại hạng Anh" style="max-height: 450px; object-fit: cover;">
+                        <figcaption class="figure-caption text-center mt-2">Các đội bóng lớn đang dồn toàn lực cho giai đoạn tăng tốc. (Ảnh: Sport247)</figcaption>
+                    </figure>
 
-        <div class="mt-5 p-3 bg-light rounded border">
-            <h5>Ý kiến bạn đọc</h5>
-            <textarea class="form-control mb-2" rows="3" placeholder="Chia sẻ cảm nghĩ của bạn về trận đấu..."></textarea>
-            <button class="btn btn-success btn-sm">Gửi bình luận</button>
+                    <div class="article-content fs-6 lh-lg">
+                        <p>Bước vào giai đoạn bản lề của mùa giải, lịch thi đấu dày đặc kết hợp cùng đấu trường châu Âu đang thử thách bản lĩnh và chiều sâu đội hình của các ứng cử viên vô địch. Chỉ một cú sảy chân nhỏ trước các đội bóng nhóm dưới cũng có thể khiến cục diện bảng xếp hạng đảo chiều hoàn toàn.</p>
+                        
+                        <h4 class="fw-bold mt-4 mb-3">Bài toán xoay tua đội hình</h4>
+                        <p>Các huấn luyện viên hàng đầu đang phải tính toán kỹ lưỡng từng phương án nhân sự. Chấn thương của các trụ cột ở hàng tiền vệ khiến nhiều đội bóng buộc phải trao cơ hội cho các tài năng trẻ từ học viện, và bất ngờ thay, chính những nhân tố mới này lại mang đến làn gió tươi mới.</p>
+
+                        <blockquote class="blockquote bg-light border-start border-4 border-success p-3 my-4 rounded-end">
+                            <p class="mb-0 fst-italic">"Ở giải đấu này, bạn không được phép nhìn vào bảng xếp hạng cho đến vòng đấu thứ 38. Mọi đối thủ đều sẵn sàng trừng phạt sai lầm của bạn."</p>
+                        </blockquote>
+
+                        <p>Cuối tuần này, tâm điểm sẽ đổ dồn về hai cuộc đại chiến trực tiếp giữa top 4. Người hâm mộ hoàn toàn có quyền kỳ vọng vào một bữa tiệc bóng đá tấn công rực lửa và kịch tính đến những phút bù giờ cuối cùng.</p>
+                    </div>
+
+                    <!-- Khu vực Bình luận -->
+                    <div class="mt-5 pt-4 border-top">
+                        <h4 class="fw-bold mb-3"><i class="bi bi-chat-dots-fill text-success me-2"></i>Bình luận bài viết</h4>
+                        
+                        <div id="comment-form-area" class="mb-4">
+                            <!-- Hiển thị động bằng JS tùy trạng thái đăng nhập -->
+                        </div>
+
+                        <div id="comment-list" class="vstack gap-3">
+                            <div class="p-3 bg-light rounded">
+                                <div class="d-flex justify-content-between">
+                                    <strong>Minh Tuấn</strong>
+                                    <small class="text-muted">2 giờ trước</small>
+                                </div>
+                                <p class="mb-0 mt-1">Mùa giải năm nay hấp dẫn thật sự, top 3 chỉ cách nhau đúng 1 trận thắng!</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Cột Sidebar (Tin nổi bật) -->
+            <div class="col-lg-4">
+                <div class="bg-white p-4 rounded shadow-sm mb-4">
+                    <h5 class="fw-bold border-bottom pb-2 mb-3 text-success">Tin Đọc Nhiều Nhất</h5>
+                    
+                    <div class="d-flex mb-3 pb-3 border-bottom">
+                        <img src="../img/img3.jfif" alt="Tin 1" class="rounded me-3" style="width: 85px; height: 65px; object-fit: cover;">
+                        <div>
+                            <a href="tintuc.html" class="text-dark text-decoration-none fw-semibold d-block small">Siêu sao tỏa sáng giúp đội nhà giành chiến thắng nghẹt thở</a>
+                            <small class="text-muted">Bóng đá</small>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-3 pb-3 border-bottom">
+                        <img src="../img/img2.avif" alt="Tin 2" class="rounded me-3" style="width: 85px; height: 65px; object-fit: cover;">
+                        <div>
+                            <a href="tintuc.html" class="text-dark text-decoration-none fw-semibold d-block small">Kỷ lục ghi điểm mới được thiết lập tại giải nhà nghề</a>
+                            <small class="text-muted">Bóng rổ</small>
+                        </div>
+                    </div>
+
+                    <div class="d-flex">
+                        <img src="../img/img1.jfif" alt="Tin 3" class="rounded me-3" style="width: 85px; height: 65px; object-fit: cover;">
+                        <div>
+                            <a href="tintuc.html" class="text-dark text-decoration-none fw-semibold d-block small">Hạt giống số một tiến vào tứ kết sau trận đấu căng thẳng</a>
+                            <small class="text-muted">Quần vợt</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
+    <!-- 3. Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
         <div class="container">
             <p class="mb-0 text-secondary">&copy; 2026 Sport247. Trang tin tức thể thao hàng đầu.</p>
         </div>
     </footer>
 
-    <!-- Kiểm tra trạng thái đăng nhập qua localStorage cho trang chi tiết -->
     <script>
-        window.addEventListener("DOMContentLoaded", function() {
+        window.addEventListener("DOMContentLoaded", function () {
             let currentUser = JSON.parse(localStorage.getItem("current_user"));
             let authSection = document.getElementById("auth-section");
+            let commentFormArea = document.getElementById("comment-form-area");
 
             if (currentUser) {
                 authSection.innerHTML = `
@@ -102,10 +166,45 @@
                     <button class="btn btn-outline-danger btn-sm" id="btn-logout">Đăng xuất</button>
                 `;
 
-                document.getElementById("btn-logout").addEventListener("click", function() {
+                document.getElementById("btn-logout").addEventListener("click", function () {
                     localStorage.removeItem("current_user");
                     location.reload();
                 });
+
+                // Cho phép bình luận nếu đã đăng nhập
+                commentFormArea.innerHTML = `
+                    <form id="form-comment">
+                        <div class="mb-2">
+                            <textarea class="form-control" id="comment-input" rows="3" placeholder="Chia sẻ cảm nghĩ của bạn với tư cách ${currentUser.name}..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-sm">Gửi bình luận</button>
+                    </form>
+                `;
+
+                document.getElementById("form-comment").addEventListener("submit", function (e) {
+                    e.preventDefault();
+                    let text = document.getElementById("comment-input").value.trim();
+                    if (text) {
+                        let list = document.getElementById("comment-list");
+                        let newItem = document.createElement("div");
+                        newItem.className = "p-3 bg-light rounded border border-success";
+                        newItem.innerHTML = `
+                            <div class="d-flex justify-content-between">
+                                <strong class="text-success">${currentUser.name}</strong>
+                                <small class="text-muted">Vừa xong</small>
+                            </div>
+                            <p class="mb-0 mt-1">${text}</p>
+                        `;
+                        list.prepend(newItem);
+                        document.getElementById("comment-input").value = "";
+                    }
+                });
+            } else {
+                commentFormArea.innerHTML = `
+                    <div class="alert alert-secondary mb-0">
+                        Vui lòng <a href="sign-in.html" class="alert-link text-success">Đăng nhập</a> để tham gia bình luận bài viết.
+                    </div>
+                `;
             }
         });
     </script>
