@@ -13,26 +13,65 @@
 <body class="bg-light d-flex flex-column min-vh-100">
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold text-success" href="../index.html"><i class="bi bi-trophy-fill me-1"></i> SPORT247</a>
+            <a class="navbar-brand fw-bold text-success" href="../index.html">
+                <i class="bi bi-trophy-fill me-1"></i> SPORT247
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Trang chủ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="tintuc.html">Tin tức chi tiết</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Bóng đá</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Bóng rổ</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active fw-semibold" href="#" role="button" data-bs-toggle="dropdown">
+                            Chuyên mục tin
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="tintuc.html"><i class="bi bi-fire text-danger me-2"></i>Tâm điểm: Ngoại hạng Anh</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item active" href="tintuc1.html">Tin Bóng đá</a></li>
+                            <li><a class="dropdown-item" href="tintuc2.html">Tin Bóng rổ</a></li>
+                            <li><a class="dropdown-item" href="tintuc3.html">Tin Quần vợt</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#accountModal">Thông tin tài khoản</a>
+                    </li>
                 </ul>
-                <div class="d-flex align-items-center" id="auth-section">
+
+                <!-- Thanh tìm kiếm nhanh -->
+                <form class="d-flex me-lg-3 my-2 my-lg-0" id="navbar-search-form">
+                    <div class="input-group input-group-sm">
+                        <input class="form-control bg-dark text-white border-secondary" type="search" id="navbar-search-input" placeholder="Tìm bài viết..." aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+                    </div>
+                </form>
+
+                <!-- Khu vực hiển thị tài khoản động -->
+                <div class="d-flex align-items-center mt-2 mt-lg-0" id="auth-section">
                     <a href="../Submit/sign-in.html" class="btn btn-outline-light btn-sm me-2">Đăng nhập</a>
                     <a href="../Submit/sign-up.html" class="btn btn-success btn-sm">Đăng ký</a>
                 </div>
             </div>
         </div>
     </nav>
+
+    <!-- Modal Thông tin tài khoản -->
+    <div class="modal fade" id="accountModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title"><i class="bi bi-person-badge text-success me-2"></i>Thông tin tài khoản</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="account-modal-body"></div>
+            </div>
+        </div>
+    </div>
 
     <!-- Nội dung chính & Sidebar -->
     <div class="container my-5">
@@ -42,9 +81,9 @@
                 <article class="bg-white p-4 p-md-5 rounded shadow-sm">
                     <span class="badge bg-danger mb-2">Bóng đá</span>
                     <h1 class="fw-bold mb-3">Siêu sao tỏa sáng giúp đội nhà giành chiến thắng nghẹt thở</h1>
-                    
+
                     <div class="text-muted small mb-4 pb-3 border-bottom">
-                        <span><i class="bi bi-calendar3 me-1"></i> 15/11/2026</span> &nbsp;|&nbsp; 
+                        <span><i class="bi bi-calendar3 me-1"></i> 15/11/2026</span> &nbsp;|&nbsp;
                         <span><i class="bi bi-eye me-1"></i> 8.420 lượt xem</span>
                     </div>
 
@@ -52,7 +91,8 @@
                         Pha lập công ở phút bù giờ đã ấn định tỷ số chung cuộc trong trận cầu 5 bàn thắng đầy cảm xúc.
                     </p>
 
-                    <img src="../img/img3.jfif" class="img-fluid rounded my-3 w-100" alt="Bóng đá" style="max-height: 400px; object-fit: cover;">
+                    <img src="../img/img3.jfif" class="img-fluid rounded my-3 w-100" alt="Bóng đá"
+                        style="max-height: 400px; object-fit: cover;">
 
                     <div class="fs-6 lh-lg mt-3">
                         <p>Trận đấu diễn ra với tốc độ rất cao ngay từ những phút đầu tiên khi cả hai đội đều khát khao giành trọn 3 điểm để cải thiện vị trí trên bảng xếp hạng.</p>
@@ -74,31 +114,37 @@
                 </article>
             </div>
 
-            <!-- Cột Sidebar: Tin Đọc Nhiều Nhất (4 phần)[cite: 3] -->
+            <!-- Cột Sidebar: Tin Đọc Nhiều Nhất (4 phần) -->
             <div class="col-lg-4">
                 <div class="bg-white p-4 rounded shadow-sm">
                     <h4 class="text-success fw-bold border-bottom pb-2 mb-3 fs-5">Tin Đọc Nhiều Nhất</h4>
-                    
+
                     <div class="d-flex mb-3 pb-3 border-bottom">
-                        <img src="../img/img3.jfif" alt="Thumbnail" class="rounded me-3" style="width: 85px; height: 65px; object-fit: cover;">
+                        <img src="../img/img3.jfif" alt="Thumbnail" class="rounded me-3"
+                            style="width: 85px; height: 65px; object-fit: cover;">
                         <div>
-                            <a href="../webpages/tintuc1.html" class="text-dark text-decoration-none fw-semibold d-block small">Siêu sao tỏa sáng giúp đội nhà giành chiến thắng nghẹt thở</a>
+                            <a href="tintuc1.html"
+                                class="text-dark text-decoration-none fw-semibold d-block small">Siêu sao tỏa sáng giúp đội nhà giành chiến thắng nghẹt thở</a>
                             <small class="text-muted">Bóng đá</small>
                         </div>
                     </div>
 
                     <div class="d-flex mb-3 pb-3 border-bottom">
-                        <img src="../img/img2.avif" alt="Thumbnail" class="rounded me-3" style="width: 85px; height: 65px; object-fit: cover;">
+                        <img src="../img/img2.avif" alt="Thumbnail" class="rounded me-3"
+                            style="width: 85px; height: 65px; object-fit: cover;">
                         <div>
-                            <a href="../webpages/tintuc2.html" class="text-dark text-decoration-none fw-semibold d-block small">Kỷ lục ghi điểm mới được thiết lập tại giải nhà nghề</a>
+                            <a href="tintuc2.html"
+                                class="text-dark text-decoration-none fw-semibold d-block small">Kỷ lục ghi điểm mới được thiết lập tại giải nhà nghề</a>
                             <small class="text-muted">Bóng rổ</small>
                         </div>
                     </div>
 
                     <div class="d-flex">
-                        <img src="../img/img1.jfif" alt="Thumbnail" class="rounded me-3" style="width: 85px; height: 65px; object-fit: cover;">
+                        <img src="../img/img1.jfif" alt="Thumbnail" class="rounded me-3"
+                            style="width: 85px; height: 65px; object-fit: cover;">
                         <div>
-                            <a href="../webpages/tintuc3.html" class="text-dark text-decoration-none fw-semibold d-block small">Hạt giống số một tiến vào tứ kết sau trận đấu căng thẳng</a>
+                            <a href="tintuc3.html"
+                                class="text-dark text-decoration-none fw-semibold d-block small">Hạt giống số một tiến vào tứ kết sau trận đấu căng thẳng</a>
                             <small class="text-muted">Quần vợt</small>
                         </div>
                     </div>
@@ -109,7 +155,9 @@
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-4 mt-auto">
-        <div class="container"><p class="mb-0 text-secondary">&copy; 2026 Sport247. Trang tin tức thể thao hàng đầu.</p></div>
+        <div class="container">
+            <p class="mb-0 text-secondary">&copy; 2026 Sport247. Trang tin tức thể thao hàng đầu.</p>
+        </div>
     </footer>
 
     <script>
@@ -117,11 +165,24 @@
             let currentUser = JSON.parse(localStorage.getItem("current_user"));
             let authSection = document.getElementById("auth-section");
             let commentFormArea = document.getElementById("comment-form-area");
+            let accountModalBody = document.getElementById("account-modal-body");
 
             if (currentUser) {
-                authSection.innerHTML = `<span class="text-white me-3">Xin chào, <b>${currentUser.name}</b></span><button class="btn btn-outline-danger btn-sm" id="btn-logout">Đăng xuất</button>`;
+                authSection.innerHTML = `<span class="text-white me-3 small">Xin chào, <b class="text-success">${currentUser.name}</b></span><button class="btn btn-outline-danger btn-sm" id="btn-logout">Đăng xuất</button>`;
                 document.getElementById("btn-logout").addEventListener("click", () => { localStorage.removeItem("current_user"); location.reload(); });
-                
+
+                accountModalBody.innerHTML = `
+                    <div class="text-center mb-3">
+                        <i class="bi bi-person-circle display-3 text-success"></i>
+                        <h5 class="mt-2 fw-bold">${currentUser.name}</h5>
+                        <span class="badge bg-success">Thành viên Sport247</span>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>Email:</strong> ${currentUser.email || "Chưa cập nhật"}</li>
+                        <li class="list-group-item"><strong>Trạng thái:</strong> <span class="text-success">Đang hoạt động</span></li>
+                    </ul>
+                `;
+
                 commentFormArea.innerHTML = `
                     <form id="form-comment">
                         <div class="mb-2"><textarea class="form-control" id="comment-input" rows="2" placeholder="Nhập bình luận..." required></textarea></div>
@@ -131,7 +192,7 @@
                 document.getElementById("form-comment").addEventListener("submit", function (e) {
                     e.preventDefault();
                     let val = document.getElementById("comment-input").value.trim();
-                    if(val) {
+                    if (val) {
                         let list = document.getElementById("comment-list");
                         let item = document.createElement("div");
                         item.className = "p-3 bg-light rounded border border-success";
@@ -141,10 +202,36 @@
                     }
                 });
             } else {
-                commentFormArea.innerHTML = `<div class="alert alert-secondary small mb-0">Vui lòng <a href="sign-in.html" class="text-success">Đăng nhập</a> để bình luận.</div>`;
+                accountModalBody.innerHTML = `
+                    <div class="text-center py-3">
+                        <p class="mb-3">Bạn chưa đăng nhập vào hệ thống.</p>
+                        <a href="../Submit/sign-in.html" class="btn btn-success me-2">Đăng nhập ngay</a>
+                        <a href="../Submit/sign-up.html" class="btn btn-outline-secondary">Tạo tài khoản</a>
+                    </div>
+                `;
+                commentFormArea.innerHTML = `<div class="alert alert-secondary small mb-0">Vui lòng <a href="../Submit/sign-in.html" class="text-success">Đăng nhập</a> để bình luận.</div>`;
             }
+
+            document.getElementById("navbar-search-form").addEventListener("submit", function (e) {
+                e.preventDefault();
+                let keyword = document.getElementById("navbar-search-input").value.toLowerCase().trim();
+                if (!keyword) return;
+
+                if (keyword.includes("ngoại hạng") || keyword.includes("vô địch")) {
+                    window.location.href = "tintuc.html";
+                } else if (keyword.includes("bóng đá") || keyword.includes("siêu sao")) {
+                    window.location.href = "tintuc1.html";
+                } else if (keyword.includes("bóng rổ") || keyword.includes("kỷ lục")) {
+                    window.location.href = "tintuc2.html";
+                } else if (keyword.includes("quần vợt") || keyword.includes("tennis") || keyword.includes("tứ kết")) {
+                    window.location.href = "tintuc3.html";
+                } else {
+                    alert("Không tìm thấy bài viết phù hợp! Hãy thử từ khóa: bóng đá, bóng rổ, quần vợt, ngoại hạng...");
+                }
+            });
         });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
