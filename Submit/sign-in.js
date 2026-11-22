@@ -18,12 +18,11 @@ login.addEventListener("submit", function(event){
     // Tìm kiếm user khớp với tên đăng nhập và mật khẩu
     let current_user = users_data.find(
         u => u.name === name && u.password === password
-
     )
 
     if (current_user) {
         localStorage.setItem("current_user", JSON.stringify(current_user))
-        location.href = "./sport247/home.html"
+        location.href = "../home.html"
     } else {
         alert("Tên đăng nhập hoặc mật khẩu không đúng!")
     }  
