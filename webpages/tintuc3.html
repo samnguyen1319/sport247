@@ -12,10 +12,9 @@
 
 <body class="bg-light d-flex flex-column min-vh-100">
 
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold text-success" href="../home.html">
+            <a class="navbar-brand fw-bold text-success" href="home.html">
                 <i class="bi bi-trophy-fill me-1"></i> SPORT247
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
@@ -24,7 +23,7 @@
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="../home.html">Trang chủ</a>
+                        <a class="nav-link" href="home.html">Trang chủ</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle active fw-semibold" href="#" role="button" data-bs-toggle="dropdown">
@@ -43,7 +42,6 @@
                     </li>
                 </ul>
 
-                <!-- Thanh tìm kiếm nhanh -->
                 <form class="d-flex me-lg-3 my-2 my-lg-0" id="navbar-search-form">
                     <div class="input-group input-group-sm">
                         <input class="form-control bg-dark text-white border-secondary" type="search" id="navbar-search-input" placeholder="Tìm bài viết..." aria-label="Search">
@@ -51,16 +49,14 @@
                     </div>
                 </form>
 
-                <!-- Khu vực hiển thị tài khoản động -->
                 <div class="d-flex align-items-center mt-2 mt-lg-0" id="auth-section">
-                    <a href="./index.html" class="btn btn-outline-light btn-sm me-2">Đăng nhập</a>
-                    <a href="./Submit/sign-up.html" class="btn btn-success btn-sm">Đăng ký</a>
+                    <a href="../index.html" class="btn btn-outline-light btn-sm me-2">Đăng nhập</a>
+                    <a href="sign-up.html" class="btn btn-success btn-sm">Đăng ký</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Modal Thông tin tài khoản -->
     <div class="modal fade" id="accountModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -73,10 +69,8 @@
         </div>
     </div>
 
-    <!-- Nội dung chính & Sidebar -->
     <div class="container my-5">
         <div class="row g-4">
-            <!-- Cột nội dung bài viết (8 phần) -->
             <div class="col-lg-8">
                 <article class="bg-white p-4 p-md-5 rounded shadow-sm">
                     <span class="badge bg-primary mb-2">Quần vợt</span>
@@ -100,7 +94,6 @@
                         <p>Lội ngược dòng thành công sau 3 set đấu căng thẳng, anh hiên ngang tiến bước vào vòng tứ kết trước sự thán phục của đông đảo người hâm mộ.</p>
                     </div>
 
-                    <!-- Bình luận -->
                     <div class="mt-5 pt-4 border-top">
                         <h4 class="fw-bold mb-3"><i class="bi bi-chat-dots-fill text-success me-2"></i>Bình luận</h4>
                         <div id="comment-form-area" class="mb-3"></div>
@@ -114,7 +107,6 @@
                 </article>
             </div>
 
-            <!-- Cột Sidebar: Tin Đọc Nhiều Nhất (4 phần) -->
             <div class="col-lg-4">
                 <div class="bg-white p-4 rounded shadow-sm">
                     <h4 class="text-success fw-bold border-bottom pb-2 mb-3 fs-5">Tin Đọc Nhiều Nhất</h4>
@@ -153,7 +145,6 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="bg-dark text-white text-center py-4 mt-auto">
         <div class="container">
             <p class="mb-0 text-secondary">&copy; 2026 Sport247. Trang tin tức thể thao hàng đầu.</p>
@@ -206,7 +197,7 @@
                     <div class="text-center py-3">
                         <p class="mb-3">Bạn chưa đăng nhập vào hệ thống.</p>
                         <a href="../index.html" class="btn btn-success me-2">Đăng nhập ngay</a>
-                        <a href="../Submit/sign-up.html" class="btn btn-outline-secondary">Tạo tài khoản</a>
+                        <a href="sign-up.html" class="btn btn-outline-secondary">Tạo tài khoản</a>
                     </div>
                 `;
                 commentFormArea.innerHTML = `<div class="alert alert-secondary small mb-0">Vui lòng <a href="../index.html" class="text-success">Đăng nhập</a> để bình luận.</div>`;
