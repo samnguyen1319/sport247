@@ -23,7 +23,7 @@ login.addEventListener("submit", function(event){
 
     if (current_user) {
         localStorage.setItem("current_user", JSON.stringify(current_user))
-        location.href = "/index.html"
+        location.href = "../home.html"
     } else {
         alert("Tên đăng nhập hoặc mật khẩu không đúng!")
     }  

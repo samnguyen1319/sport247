@@ -26,7 +26,7 @@ register.addEventListener("submit", function(event){
         )
 
         localStorage.setItem("users", JSON.stringify(users_data))
-        location.href = "sign-in.html" // Chuyển hướng sang trang sign-in.html
+        location.href = "../index.html" // Chuyển hướng sang trang sign-in.html
     } else {
         let users_data = [
             {
@@ -37,6 +37,6 @@ register.addEventListener("submit", function(event){
         ]
 
         localStorage.setItem("users", JSON.stringify(users_data))
-        location.href = "sign-in.html" // Chuyển hướng sang trang sign-in.html
+        location.href = "../index.html" // Chuyển hướng sang trang sign-in.html
     }
 })
